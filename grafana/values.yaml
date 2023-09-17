@@ -1,0 +1,14 @@
+persistence:
+  enabled: true
+  type: pvc
+  size: 2Gi
+
+plugins:
+  - http://plugin-repo.plugin-demo.svc.cluster.local/hello-world/versions/1.0.0/hellworld-1.0.0.zip;my-little-pony
+
+grafana.ini:
+  plugins:
+    allow_loading_unsigned_plugins: passionatedevelopment-helloworld-app
+  log:
+    mode: console
+    level: DEBUG
